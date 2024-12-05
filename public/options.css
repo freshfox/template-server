@@ -1,0 +1,84 @@
+/* Fixed div box in the bottom-left corner */
+.options-box {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Black with transparency */
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.title-box {
+    margin-bottom: 12px;
+}
+
+/* Initially hidden box (use translateY for sliding animation) */
+.options-box.hidden {
+    transform: translateY(93%);
+}
+
+/* Label styling */
+.label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Button container to group options */
+.button-container {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+/* Option buttons */
+.option-button {
+    background-color: #eee;
+    border: none;
+    color: black;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.option-button:hover {
+    background-color: #aaa;
+}
+
+/* Highlighting the selected option */
+.option-button.selected {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Toggle button inside the options box */
+.toggle-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: black;
+    color: white;
+    padding: 6px 8px;
+    border-radius: 50%;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #444;
+}
